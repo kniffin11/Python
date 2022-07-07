@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker Board</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Checker Board</h1>
+    <table>
+        <!-- for loop of columns -->
+        {% for i in range(0,y,1): %}
+            <tr>
+                <!-- for loop of rows  -->
+                {% for j in range (0,x,1) %}
+                    <!-- if i%2 == 0, red, Else black -->
+                    {% if(i % 2 == 0): %}
+                    <!-- if j%2 == 0, black. Else red -->
+                        {% if(j % 2 == 0): %}
+                            <td class="color1" style="background-color: {{color1}};"></td>
+                        {% else: %}
+                            <td class="color2" style="background-color: {{color2}};"></td>
+                        {% endif %}
+                    {% else: %}
+                        {% if(j % 2 == 0): %}
+                            <td class="color2" style="background-color: {{color2}};"></td>
+                        {% else: %}
+                            <td class="color1" style="background-color: {{color1}};"></td>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

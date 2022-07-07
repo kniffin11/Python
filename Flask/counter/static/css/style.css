@@ -1,0 +1,55 @@
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flexbox;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.organize{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+    border-radius: 10%;
+}
+
+#textbox{
+    width: 100px;
+    height: 40px;
+}
+
+#click{
+    background-color: blue;
+    color: yellow;
+    border-color: yellow;
+}
+
+#reset{
+    background-color: red;
+    color: grey;
+    border-color: grey;
+}
+
+#plus_2{
+    background-color: rgb(0, 255, 106);
+    color: rgb(5, 5, 2);
+    border-color: rgb(0, 0, 0);
+}
+
+#plus_any{
+    background-color: rgb(218, 30, 202);
+    color: rgb(5, 5, 2);
+    border-color: rgb(0, 0, 0);
+    width: 100px;
+}

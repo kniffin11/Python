@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="/summarize" method="post" class="form">
+            <h1>Dojo Survey</h1>
+            <div class="name looks">
+                <label for='name'>Name: </label>
+                <input type='text' name='name'>
+            </div>
+            <div class="location looks">
+                <label for="location">Dojo Location: </label>
+                <select name="location">
+                    <option value='Chicago'>Chicago</option>
+                    <option value='Seattle'>Seattle</option>
+                    <option value='Los Angeles'>Los Angeles</option>
+                    <option value='San Diego'>San Diego</option>
+                    <option value='Boise'>Boise</option>
+                </select>
+            </div>
+            <div class="favorite looks">
+                <label for="favorite_langauge">Favorite Language: </label>
+                <select name="favorite_langauge">
+                    <option value='HTML'>HTML</option>
+                    <option value='CSS'>CSS</option>
+                    <option value='JavaScript'>JavaScript</option>
+                    <option value='Python'>Python</option>
+                    <option value='Java'>Java</option>
+                    <option value='C#'>C#</option>
+                </select>
+            </div>
+            <div class="comments looks">
+                <label for="comments">Comments: </label>
+                <textarea name="comments" cols="30" rows="8"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.new_dojo{
+    margin: 50px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.view_dojos{
+    margin: 50px;
+    width: 300px;
+    justify-content: center;
+}
