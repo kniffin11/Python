@@ -1,0 +1,29 @@
+use dojos_and_ninjas_schema;
+
+insert into dojos(created_at) values(now());
+insert into dojos(created_at) values(now());
+insert into dojos(created_at) values(now());
+
+delete from dojos where id > 0; 
+ALTER TABLE `dojos` AUTO_INCREMENT = 0; -- After running code several times, the id didn't reset, so I set it to 0 here but for some reason the next 3 values are 3, 4, 5. Not sure if its mysql being slow to update or if theres a real reason for this
+
+insert into dojos(created_at) values(now());
+insert into dojos(created_at) values(now());
+insert into dojos(created_at) values(now());
+
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('bob', 'mayfield', 22, now(), 3);
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('max', 'treyarch', 21, now(), 3);
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('fred', 'activision', 18, now(), 3);
+
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('george', 'lopez', 20, now(), 4);
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('morgan', 'freeman', 54, now(), 4);
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('lionel', 'messi', 32, now(), 4);
+
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('francis', 'baker', 22, now(), 5);
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('jordan', 'michael', 27, now(), 5);
+insert into ninjas(first_name, last_name, age, created_at, dojo_id) values('fredrich', 'jones', 19, now(), 5);
+
+select * from ninjas where dojo_id = 3; -- first
+select * from ninjas where dojo_id = 5; -- last 
+
+select dojo_id from ninjas order by id desc limit 1; -- descending starts at the bottom and add a limit of 1 
